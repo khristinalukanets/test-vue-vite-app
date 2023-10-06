@@ -3,15 +3,22 @@ I created this test app because of an issue I found during migration from vue-cl
 
 Description:
 
-In my real case, I have a few Vue projects in one repo(here I created one test project app-1/ui folder). 
+In my real case, I have a few Vue projects in one repo. 
 All these projects are part of one web platform. 
 So they are using the same components and styles. 
-These components and styles are held in separate folders inside this repo but outside of any project(ui-common). 
+These components and styles are held in separate folders inside this repo but outside of any project. 
 
-Before I used vue-cli / webpack and it worked great. But now I decided to migrate to Vite. 
+In this test repo, I created one test project app-1/ui folder which has one page, and used components from ui-common/src folder. That component used ElNotification from  "element-plus". 
+So I provided some additional configuration for the app in `vite.config.js`
+```
+  build: {
+    rollupOptions: {
+      external: [vue, 'element-plus'] 
+    }
+  }
+```
 
-I already resolved all issues and my applications work in dev mode. 
-But I received the next error in production
+But I received the next error in the production
 `Uncaught TypeError: Failed to resolve module specifier "element-plus". Relative references must start with either "/", "./", or "../"." Send you my vite.config and package.json`
 
 
