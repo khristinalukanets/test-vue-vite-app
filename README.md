@@ -12,7 +12,7 @@ Before I used vue-cli / webpack and it worked great. But now I decided to migrat
 
 I already resolved all issues and my applications work in dev mode. 
 But I received the next error in production
-`Uncaught TypeError: Failed to resolve module specifier "vue". Relative references must start with either "/", "./", or "../"." Send you my vite.config and package.json`
+`Uncaught TypeError: Failed to resolve module specifier "element-plus". Relative references must start with either "/", "./", or "../"." Send you my vite.config and package.json`
 
 
 Steps to reproduce
@@ -22,4 +22,4 @@ Steps to reproduce
 
 - run `npm run build` // will go without errors
 - run `npm run preview` // --> open page --> page is empty and check console
-- console error `Uncaught TypeError: Failed to resolve module specifier "vue". Relative references must start with either "/", "./", or "../"." Send you my vite.config and package.json`
+- console error `Uncaught TypeError: Failed to resolve module specifier "element-plus". Relative references must start with either "/", "./", or "../"." Send you my vite.config and package.json`
